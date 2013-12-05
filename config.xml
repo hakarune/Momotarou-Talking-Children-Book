@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.hakainc.tlkingmomo"
-        version   = "1.0.0">
+        version   = "0.0.1">
 
     <name>Momotarou | Talking Children Book</name>
 
@@ -27,8 +27,11 @@
         following tag to your config.xml; you will still have the INTERNET
         permission on your app, which PhoneGap requires.
     -->
-    <preference name="permissions"                value="none"/>
-
+    <preference name="permissions"  value="none"/>
+	<preference name="Fullscreen" value="true" />
+    <preference name="WebViewBounce" value="true" />
+	<preference name="Orientation" value="landscape" />
+	
     <!-- Customize your app and platform with the preference element. -->
     <preference name="phonegap-version"           value="2.9.0" />          <!-- all: current version of PhoneGap -->
     <preference name="orientation"                value="default" />        <!-- all: default means both landscape and portrait are enabled -->
