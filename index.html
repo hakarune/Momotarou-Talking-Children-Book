@@ -251,7 +251,6 @@
 			</div>
 
 		</div><!-- /container -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="js/jquerypp.custom.js"></script>
 		<script src="js/jquery.bookblock.js"></script>
 		<script>
@@ -346,57 +345,7 @@
 				return curHtml.replace(reg, "<a href='#' class='$1'>$1</a>");
 			});
 		</script>
-		<script type="text/javascript" src="js/soundManager2.js"></script> 
-		<script type="text/javascript" src="js/PxLoaderSound.js"></script> 
-		<script>
-			// initialize the sound manager 
-			soundManager.url = 'soundManager2/'; 
-			soundManager.flashVersion = 9; 
-			soundManager.useHighPerformance = true; // reduces delays 
-			 
-			// reduce the default 1 sec delay to 500 ms 
-			soundManager.flashLoadTimeout = 500; 
-			 
-			// mp3 is required by default, but we don't want any requirements 
-			soundManager.audioFormats.mp3.required = false; 
-			 
-			// flash may timeout if not installed or when flashblock is installed 
-			soundManager.ontimeout(function(status) { 
-				// no flash, go with HTML5 audio 
-				soundManager.useHTML5Audio = true; 
-				soundManager.preferFlash = false; 
-				soundManager.reboot(); 
-			}); 
-			 
-			soundManager.onready(function() { 
-				// ok to show the button to run the sound sample 
-				$('#sample4-run').show(); 
-			}); 
-		</script>
-		<script>
-			loader = new PxLoader(), 
-			i, len, url; 
-		 
-			// queue each sound for loading 
-			for(i=0, len = words.length; i < len; i++) { 
-			 
-				// see if the browser can play m4a 
-				url = 'audio/' + words[i] + '.mp3'; 
-				if (!soundManager.canPlayURL(url)) { 
-			 
-					// ok, what about ogg? 
-					url = 'audio/' + words[i] + '.ogg'; 
-					if (!soundManager.canPlayURL(url)) { 
-						continue; // can't be played 
-					} 
-				} 
-			 
-				// queue the sound using the name as the SM2 id 
-				loader.addSound(words[i], url); 
-			} 
-			 
-			loader.start(); 
-		</script>
+		
 		<script>
 			$( document ).ready(function() {
 				function addSource(elem, path) {
